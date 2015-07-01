@@ -17,5 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'ribbit_app.views.index', name='home'),
+    url(r'^login$', 'ribbit_app.views.login_view', name='login'),
+    url(r'^logout$', 'ribbit_app.views.logout_view', name='logout'),
+    url(r'^signup$', 'ribbit_app.views.signup', name='signup'),
 ]

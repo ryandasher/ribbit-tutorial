@@ -41,7 +41,7 @@ class AuthenticateForm(AuthenticationForm):
 
 
 class RibbitForm(forms.ModelForm):
-    content = forms.CharField(required=True, widget=forms.widgets.TextArea(attrs={'class': 'ribbitText'}))
+    content = forms.CharField(required=True, widget=forms.widgets.Textarea(attrs={'class': 'ribbitText'}))
 
     def is_valid(self):
         form = super(RibbitForm, self).is_valid()
