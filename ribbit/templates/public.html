@@ -5,7 +5,7 @@
     <div class="panel right">
         <h1>Create a Ribbit</h1>
         <p>
-            <form action="submit" method="post">{% csrf_token %}
+            <form action="{% url 'submit' %}" method="post">{% csrf_token %}
                 {% for field in ribbit_form %}
                     {{ field }}
                 {% endfor %}

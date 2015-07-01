@@ -11,11 +11,11 @@
             <img src="{% static 'gfx/logo.png' %}">
             <span>Twitter Clone</span>
             {% block login %}
-            <a href="/">Home</a>
-            <a href="/users/">Public Profiles</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'users' %}">Public Profiles</a>
             <a href="/users/{{ username }}">My Profile</a>
-            <a href="/ribbits">Public Ribbits</a>
-            <form action="/logout">
+            <a href="{% url 'ribbits' %}">Public Ribbits</a>
+            <form action="{% url 'logout' %}">
                 <input type="submit" id="btnLogOut" value="Log Out">
             </form>
             {% endblock %}
