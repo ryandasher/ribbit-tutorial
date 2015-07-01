@@ -20,5 +20,7 @@ urlpatterns = [
     url(r'^$', 'ribbit_app.views.index', name='home'),
     url(r'^login$', 'ribbit_app.views.login_view', name='login'),
     url(r'^logout$', 'ribbit_app.views.logout_view', name='logout'),
+    url(r'^ribbits$', 'ribbit_app.views.public', name='ribbits'),
+    url(r'^submit$', 'ribbit_app.views.submit', name='submit'),
     url(r'^signup$', 'ribbit_app.views.signup', name='signup'),
 ]
